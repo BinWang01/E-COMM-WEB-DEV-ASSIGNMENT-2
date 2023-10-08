@@ -44,7 +44,7 @@ class Area(models.Model):
     total_hours = models.IntegerField()
     degree = models.ForeignKey(Degree, on_delete=models.CASCADE)
     def __str__(self) -> str:
-        return self.degree.degree_name + ":" + self.area_name
+        return self.degree.department.college.college_name + ":" + self.degree.department.department_name + ":" + self.degree.degree_name + ":" + self.area_name
 
 class Course(models.Model):
     course_number = models.CharField(max_length=100, help_text="The number of the Course.")
