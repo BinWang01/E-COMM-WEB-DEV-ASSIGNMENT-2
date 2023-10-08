@@ -5,4 +5,4 @@ from data.models import College
 
 def index(request):
     area_courses = Area_Course.objects.all()
-    return render(request,"base.html",{ 'items':area_courses})
+    return render(request,"index.html",{ 'items':area_courses})
